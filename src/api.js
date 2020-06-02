@@ -1,9 +1,7 @@
-import  axios from "axios"
+import axios from "axios";
 
-
-
-export const messagesAPI = {
-    getData(){
-        return axios.get()
-    }
-}
+export const dataAPI = {
+  getData() {
+    return axios.get("https://nomen1.github.io/test-task/data.json");
+  }
+};

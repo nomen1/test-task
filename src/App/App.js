@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
+import s from "./App.module.css";
 
-import './App.css';
+export const App = (props) => {
+  const { data } = props;
 
-function App() {
-  return (
-    <div className="App">
-      cvc
+  const list = Object.keys(data).map((key) => (
+    <div className={s.listContainer} key={key}>
+      <span>{key}</span> <span>{data[key]}</span>
     </div>
-  );
-}
+  ));
 
-export default App;
+  return <div className={s.container}>{list}</div>;
+};
+
